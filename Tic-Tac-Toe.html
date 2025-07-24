@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="Tic-Tac-Toe.css">
+</head>
+<body>
+    <div class="floating-particles" id="particles"></div>
+    
+    <div class="app-container">
+        <div class="app-header">
+            <h1 class="app-title">TicTacPro</h1>
+            <p class="app-subtitle">Professional Tic-Tac-Toe Experience</p>
+        </div>
+
+        <div class="game-content">
+            <div class="mode-selector">
+                <div class="mode-tabs">
+                    <button class="mode-tab active" data-tab="ai">🤖 VS AI</button>
+                    <button class="mode-tab" data-tab="pvp">👥 1 VS 1</button>
+                </div>
+                
+                <div class="difficulty-options" id="aiOptions">
+                    <button class="difficulty-btn active" data-mode="easy">
+                        <div style="font-weight: 600; margin-bottom: 2px;">Easy</div>
+                        <div style="font-size: 0.7rem; opacity: 0.8;">Beginner</div>
+                    </button>
+                    <button class="difficulty-btn" data-mode="medium">
+                        <div style="font-weight: 600; margin-bottom: 2px;">Medium</div>
+                        <div style="font-size: 0.7rem; opacity: 0.8;">Balanced</div>
+                    </button>
+                    <button class="difficulty-btn" data-mode="hard">
+                        <div style="font-weight: 600; margin-bottom: 2px;">Hard</div>
+                        <div style="font-size: 0.7rem; opacity: 0.8;">Unbeatable</div>
+                    </button>
+                </div>
+                
+                <div class="pvp-indicator" id="pvpIndicator">
+                    <span class="icon">⚔️</span>
+                    <div class="title">Local Multiplayer</div>
+                    <div class="subtitle">Two players take turns on the same device</div>
+                </div>
+            </div>
+
+            <div class="score-section">
+                <div class="score-card" id="playerCard">
+                    <span class="score-icon">🎮</span>
+                    <div class="score-value" id="playerScore">0</div>
+                    <div class="score-label" id="playerLabel">Player 1 (X)</div>
+                </div>
+                <div class="score-card" id="tieCard">
+                    <span class="score-icon">🤝</span>
+                    <div class="score-value" id="tieScore">0</div>
+                    <div class="score-label">Draws</div>
+                </div>
+                <div class="score-card" id="computerCard">
+                    <span class="score-icon">🤖</span>
+                    <div class="score-value" id="computerScore">0</div>
+                    <div class="score-label" id="computerLabel">AI (O)</div>
+                </div>
+            </div>
+
+            <div class="game-board" id="gameBoard">
+                <button class="cell" data-index="0"></button>
+                <button class="cell" data-index="1"></button>
+                <button class="cell" data-index="2"></button>
+                <button class="cell" data-index="3"></button>
+                <button class="cell" data-index="4"></button>
+                <button class="cell" data-index="5"></button>
+                <button class="cell" data-index="6"></button>
+                <button class="cell" data-index="7"></button>
+                <button class="cell" data-index="8"></button>
+            </div>
+
+            <div class="status-section">
+                <div class="status-text" id="statusText">Ready to play?</div>
+                <div class="status-subtext" id="statusSubtext">Click any cell to make your first move</div>
+            </div>
+
+            <div class="controls">
+                <button class="btn btn-primary" onclick="resetGame()">New Game</button>
+                <button class="btn btn-secondary" onclick="resetScores()">Reset Scores</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="celebration" id="celebration"></div>
+    <script src="script.js"></script>
+</body>
+</html>
